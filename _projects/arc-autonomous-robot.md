@@ -8,6 +8,7 @@ tags: [Autonomy, Mechanical Design, Controls]
 featured: true
 order: 4
 image: /assets/images/projects/Tritn_robotics/sentry_gif.gif   # GIFs work anywhere an image does
+cover: /assets/images/projects/Tritn_robotics/sentry_gif.gif
 stats:
   - value: "−28%"
     label: Robot volume
@@ -26,6 +27,8 @@ Triton Robotics competes in the ARC robotics contest, where autonomous robots ai
 - **Stripped down the previous iteration**, reducing volume by **28%** and increasing speed.
 - **Eliminated backlash** by replacing the drives with **capstan-based actuators**.
 - Used an **Nvidia Jetson** and **CUDA** to fully automate the control scheme, giving the robot autonomous targeting, task-based repositioning, and real-time projectile calculations.
+
+{% include media.html src="/assets/images/projects/Tritn_robotics/pitch_assmb.png" caption="CAD of the turret's pitch assembly: a truss-cut side plate driving the launcher module, mounted on the yaw ring." %}
 
 ## Outcome
 

@@ -28,9 +28,10 @@ period: 2025 – 2026
 tags: [Mechanical Design, Controls]
 featured: true          # show on the home page
 order: 9                # sort position
-image: /assets/images/projects/my-project.jpg   # card thumbnail + cover (jpg/png/gif, optional)
+image: /assets/images/projects/my-project.jpg   # card thumbnail + link-preview image (jpg/png/gif, optional)
+card: /assets/images/projects/my-project.mp4    # use a video/other media on the card instead of `image` (optional)
 image_position: 50% 30%                         # where the card crop focuses (optional)
-cover: /assets/images/projects/my-project.mp4   # different cover for the project page; .mp4 autoplays muted on loop
+cover: /assets/images/projects/my-project.mp4   # large media at the top of the project page (optional; .mp4 autoplays muted on loop)
 stats:                  # optional highlight numbers
   - value: "−40%"
     label: Weight
@@ -54,6 +55,8 @@ Put this on its own line, with a blank line above and below, anywhere in a proje
 
 - `.mp4` / `.webm` play like a GIF (muted, looping). Add `controls=true` for a normal video player with sound.
 - `class="wide"` lets a figure extend past the text column, which helps detailed diagrams.
+- `class="small"` caps a figure at 420px, which suits portrait photos and low-resolution images.
+- Avoid spaces in file and folder names. Use `_` instead.
 - Clicking an image opens it full size.
 - Prefer MP4 over GIF for anything longer than a couple of seconds, since it's often 10–20× smaller.
 

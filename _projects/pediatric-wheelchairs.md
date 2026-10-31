@@ -7,7 +7,10 @@ period: 2024 – 2025
 tags: [Assistive Tech, Mechanical Design]
 featured: true
 order: 5
-# image: /assets/images/projects/wheelchairs.jpg
+image: /assets/images/projects/pediatric_wheelchairs/wheelchair_1.png
+gallery:
+  - src: /assets/images/projects/pediatric_wheelchairs/wheelchair_1.png
+  - src: /assets/images/projects/pediatric_wheelchairs/wheelchair_2.png
 stats:
   - value: "8"
     label: Wheelchairs delivered

@@ -16,10 +16,9 @@ layout: default
     </div>
   </header>
 
-  {% assign cover = page.cover | default: page.image %}
-  {% if cover %}
+  {% if page.cover %}
   <div class="container">
-    {% include media.html src=cover class="project-cover" alt=page.title %}
+    {% include media.html src=page.cover class="project-cover" alt=page.title %}
   </div>
   {% endif %}
 

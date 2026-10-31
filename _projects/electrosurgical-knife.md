@@ -7,7 +7,12 @@ period: 2025 – Present
 tags: [Medical Robotics, Manufacturing]
 featured: false
 order: 3
-# image: /assets/images/projects/es-knife.jpg
+image: /assets/images/projects/surgical_knife/thermal_knife.jpg
+gallery:
+  - src: /assets/images/projects/surgical_knife/thermal_knife.jpg
+    caption: Knife tip energized during a bench test.
+  - src: /assets/images/projects/surgical_knife/thermal_imaging.jpg
+    caption: Thermal image during activation. Heat stays concentrated at the tip (peak reading 130°).
 ---
 
 ## Overview

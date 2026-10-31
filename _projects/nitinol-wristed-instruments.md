@@ -7,8 +7,8 @@ period: 2025 – Present
 tags: [Medical Robotics, Mechanical Design, Manufacturing]
 featured: true
 order: 1
-image: /assets/images/projects/Helping_Hand/stepwise_resection.jpg   # card thumbnail
-image_position: 75% 60%                                              # crop focus on the card
+image: /assets/images/projects/Helping_Hand/stepwise_resection.jpg   # still used for link previews
+card: /assets/images/projects/Helping_Hand/HH_actuating.mp4          # plays on the project card
 cover: /assets/images/projects/Helping_Hand/HH_actuating.mp4         # top of the project page
 stats:
   - value: 4 h → 23 min
