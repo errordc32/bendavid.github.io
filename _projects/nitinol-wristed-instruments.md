@@ -7,15 +7,14 @@ period: 2025 – Present
 tags: [Medical Robotics, Mechanical Design, Manufacturing]
 featured: true
 order: 1
-# image: /assets/images/projects/nitinol-instruments.jpg
+image: /assets/images/projects/Helping_Hand/stepwise_resection.jpg   # card thumbnail
+image_position: 75% 60%                                              # crop focus on the card
+cover: /assets/images/projects/Helping_Hand/HH_actuating.mp4         # top of the project page
 stats:
   - value: 4 h → 23 min
     label: Machining time per part
   - value: IEEE ISMR
     label: Paper in progress
-# gallery:
-#   - src: /assets/images/projects/nitinol-1.jpg
-#     caption: Wire-EDM jig setup
 ---
 
 ## Overview
@@ -28,6 +27,12 @@ Removing cancerous polyps from the colon takes dexterity that is hard to get thr
 - **Fabricated** the first iterations by CNC milling, then **redesigned the production workflow** around sinker-EDM HSS jigging and wire EDM. That took machining time from **4 hours to 23 minutes** per part.
 - Integrated the instruments with the lab's actuation and sensing stack (see [Surgical Robot Control & Data Pipeline]({{ '/projects/surgical-robot-data-pipeline/' | relative_url }})).
 
+{% include media.html src="/assets/images/projects/Helping_Hand/HH_Rig_fig.png" class="wide" caption="System overview: two-segment tendon-driven nitinol wrist with grasper and ESD knife (left), driven by a lead-screw linear motion unit with inline beam load cells, wired to the electrosurgical generator (right)." %}
+
 ## Outcome
+
+On ex-vivo tissue, the instrument performs the full traction-assisted resection sequence: proximal articulation exposes the knife, distal articulation brings the grasper into contact, traction lifts the tissue, and the electrosurgical knife excises it.
+
+{% include media.html src="/assets/images/projects/Helping_Hand/stepwise_resection.jpg" caption="Stepwise resection: (a) initial pose, (b) proximal articulation, (c) grasper contact, (d) traction, (e) ESG activation, (f) excised tissue." %}
 
 This work is the basis of a paper on minimally invasive traction-assisted polypectomy, to be presented at the **IEEE International Symposium on Medical Robotics**.

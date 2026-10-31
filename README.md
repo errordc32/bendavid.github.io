@@ -28,7 +28,9 @@ period: 2025 – 2026
 tags: [Mechanical Design, Controls]
 featured: true          # show on the home page
 order: 9                # sort position
-image: /assets/images/projects/my-project.jpg   # card + cover image (optional)
+image: /assets/images/projects/my-project.jpg   # card thumbnail + cover (jpg/png/gif, optional)
+image_position: 50% 30%                         # where the card crop focuses (optional)
+cover: /assets/images/projects/my-project.mp4   # different cover for the project page; .mp4 autoplays muted on loop
 stats:                  # optional highlight numbers
   - value: "−40%"
     label: Weight
@@ -41,6 +43,19 @@ Write the case study in Markdown here.
 ```
 
 Projects without an `image` get a blueprint-style placeholder.
+
+### Images, GIFs, and video inside a write-up
+
+Put this on its own line, with a blank line above and below, anywhere in a project's Markdown:
+
+```liquid
+{% include media.html src="/assets/images/projects/my-project/test.mp4" caption="Bench test" %}
+```
+
+- `.mp4` / `.webm` play like a GIF (muted, looping). Add `controls=true` for a normal video player with sound.
+- `class="wide"` lets a figure extend past the text column, which helps detailed diagrams.
+- Clicking an image opens it full size.
+- Prefer MP4 over GIF for anything longer than a couple of seconds, since it's often 10–20× smaller.
 
 ### Files to add
 

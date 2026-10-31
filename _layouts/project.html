@@ -16,9 +16,10 @@ layout: default
     </div>
   </header>
 
-  {% if page.image %}
+  {% assign cover = page.cover | default: page.image %}
+  {% if cover %}
   <div class="container">
-    <figure class="project-cover"><img src="{{ page.image | relative_url }}" alt="{{ page.title }}"></figure>
+    {% include media.html src=cover class="project-cover" alt=page.title %}
   </div>
   {% endif %}
 
@@ -39,11 +40,8 @@ layout: default
   {% if page.gallery %}
   <div class="container">
     <div class="gallery">
-      {% for img in page.gallery %}
-      <figure>
-        <img src="{{ img.src | relative_url }}" alt="{{ img.caption | default: page.title }}" loading="lazy">
-        {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
-      </figure>
+      {% for item in page.gallery %}
+        {% include media.html src=item.src caption=item.caption alt=page.title %}
       {% endfor %}
     </div>
   </div>

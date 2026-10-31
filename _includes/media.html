@@ -1,0 +1,18 @@
+{%- comment -%}
+  Image, GIF, or video with optional caption. Usable in layouts and inside project Markdown:
+  {% include media.html src="/assets/..." caption="..." class="wide" %}
+  Videos (.mp4/.webm) autoplay muted and loop like a GIF; pass controls=true for a normal player.
+{%- endcomment -%}
+{%- assign src = include.src | relative_url -%}
+<figure class="media {{ include.class }}">
+{%- if include.src contains '.mp4' or include.src contains '.webm' -%}
+{%- if include.controls -%}
+<video src="{{ src }}" controls playsinline preload="metadata"></video>
+{%- else -%}
+<video src="{{ src }}" autoplay muted loop playsinline preload="metadata"></video>
+{%- endif -%}
+{%- else -%}
+<a href="{{ src }}" target="_blank" rel="noopener"><img src="{{ src }}" alt="{{ include.caption | default: include.alt | strip_html }}" loading="lazy"></a>
+{%- endif -%}
+{%- if include.caption -%}<figcaption>{{ include.caption }}</figcaption>{%- endif -%}
+</figure>

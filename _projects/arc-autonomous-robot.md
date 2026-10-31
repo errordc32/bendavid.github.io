@@ -7,7 +7,7 @@ period: 2023 – 2025
 tags: [Autonomy, Mechanical Design, Controls]
 featured: true
 order: 4
-# image: /assets/images/projects/arc-robot.jpg
+image: /assets/images/projects/Tritn_robotics/sentry_gif.gif   # GIFs work anywhere an image does
 stats:
   - value: "−28%"
     label: Robot volume
