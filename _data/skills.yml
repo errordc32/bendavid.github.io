@@ -1,0 +1,8 @@
+- name: CAD & Analysis
+  list: [SolidWorks, Fusion 360, Onshape, Autodesk, GD&T, Ansys Discovery, Ansys Maxwell]
+- name: Manufacturing
+  list: [CNC Mill & Lathe, Sinker EDM, Wire EDM, Waterjet, Laser Cutting, 3D Printing, Manual Machining]
+- name: Programming & Controls
+  list: [C++, Python, MATLAB, Java, Arduino, ROS / micro-ROS, Nvidia Jetson / CUDA, IoT, Control Systems]
+- name: Professional
+  list: [Research, Data Interpretation, Project Management, Team Leadership]

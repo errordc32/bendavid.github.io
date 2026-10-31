@@ -1,3 +1,43 @@
-theme: jekyll-theme-tactile
-title: Ben's homepage
-description: Bookmark this to keep an eye on my project updates!
+title: Bendavid Maimon
+tagline: Mechanical Engineer · Robotics & Controls
+description: >-
+  Portfolio of Bendavid Maimon — mechanical engineering student at UC San Diego
+  building surgical robots, autonomous machines, and assistive devices.
+lang: en-US
+
+author:
+  name: Bendavid Maimon
+  email: bendavid.maimon@gmail.com
+  location: La Jolla, CA
+  # Fill these in (or leave blank to hide the icon)
+  linkedin: ""        # e.g. https://www.linkedin.com/in/your-handle
+  github: https://github.com/errordc32
+
+# Drop your resume PDF at this path to enable the "Resume" buttons
+resume: /assets/files/Bendavid_Maimon_Resume.pdf
+
+# Projects live in _projects/ — one Markdown file per project
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

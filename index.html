@@ -1,0 +1,91 @@
+---
+---
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Mechanical Engineering · Robotics &amp; Controls · UC San Diego</p>
+      <h1>I design, machine, and program robots for surgery, competition, and accessibility.</h1>
+      <p class="lead">
+        I'm Bendavid Maimon, a mechanical engineering student and undergraduate researcher
+        in the Morimoto Robotics Lab. I take hardware from CAD through CNC and EDM to
+        working control code.
+      </p>
+      <div class="actions">
+        <a class="btn" href="{{ '/projects/' | relative_url }}">View projects</a>
+        <a class="btn btn-ghost" href="{{ '/about/' | relative_url }}">About &amp; experience</a>
+      </div>
+    </div>
+    <ul class="hero-stats">
+      <li><span class="stat-value">4 h → 23 min</span><span class="stat-label">Instrument machining time after an EDM workflow redesign</span></li>
+      <li><span class="stat-value">3rd place</span><span class="stat-label">ARC Robotics Nationals with Triton Robotics</span></li>
+      <li><span class="stat-value">8</span><span class="stat-label">3D-printed wheelchairs for children at Rady Children's</span></li>
+      <li><span class="stat-value">IEEE ISMR</span><span class="stat-label">Upcoming paper on traction-assisted polypectomy</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Featured work</h2>
+      <a class="link-arrow" href="{{ '/projects/' | relative_url }}">All projects →</a>
+    </div>
+    <div class="grid">
+      {% assign featured = site.projects | where: 'featured', true | sort: 'order' %}
+      {% for project in featured %}
+        {% include project-card.html project=project %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head"><h2>What I do</h2></div>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="pillar-num">01</span>
+        <h3>Design</h3>
+        <p>Mechanisms and instruments in SolidWorks, Fusion 360, and Onshape, with GD&amp;T and FEA (Ansys Discovery, Maxwell) before anything gets cut.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-num">02</span>
+        <h3>Fabricate</h3>
+        <p>CNC mill and lathe, sinker and wire EDM, waterjet, laser cutting, and 3D printing, plus building fixtures and workflows so parts get made faster.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-num">03</span>
+        <h3>Control</h3>
+        <p>ROS and micro-ROS, C++, Python, MATLAB, Arduino, and Jetson/CUDA, from actuation and sensor fusion to fully autonomous behavior.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Experience</h2>
+      <a class="link-arrow" href="{{ '/about/' | relative_url }}">Full background →</a>
+    </div>
+    <ol class="timeline compact">
+      {% for job in site.data.experience %}
+      <li>
+        <span class="timeline-date">{{ job.period }}</span>
+        <div>
+          <h3>{{ job.org }}</h3>
+          <p class="muted">{{ job.role }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="container cta-inner">
+    <h2>Let's build something.</h2>
+    <p class="lead">I'm open to internships, research collaborations, and interesting hardware problems.</p>
+    <a class="btn" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+  </div>
+</section>

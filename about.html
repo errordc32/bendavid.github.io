@@ -1,0 +1,72 @@
+---
+title: About
+permalink: /about/
+description: Background, experience, and skills of Bendavid Maimon.
+---
+<section class="page-head">
+  <div class="container about-head">
+    {% comment %} Add a headshot at assets/images/headshot.jpg and uncomment:
+    <img class="headshot" src="{{ '/assets/images/headshot.jpg' | relative_url }}" alt="Bendavid Maimon">
+    {% endcomment %}
+    <div>
+      <p class="eyebrow">About</p>
+      <h1>Bendavid Maimon</h1>
+      <p class="lead">
+        I'm a mechanical engineering student at UC San Diego specializing in robotics and controls,
+        graduating in June 2027. My work centers on medical robotics: wristed nitinol instruments and
+        electrosurgical tools for endoscopic procedures. I also build competition robots and open-source
+        assistive devices for people the market tends to overlook.
+      </p>
+      <div class="actions">
+        {% if site.resume %}<a class="btn" href="{{ site.resume | relative_url }}" target="_blank" rel="noopener">Download resume</a>{% endif %}
+        <a class="btn btn-ghost" href="mailto:{{ site.author.email }}">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container about-grid">
+    <div>
+      <h2 class="label">Experience</h2>
+      <ol class="timeline">
+        {% for job in site.data.experience %}
+        <li>
+          <span class="timeline-date">{{ job.period }}</span>
+          <div>
+            <h3>{{ job.org }}</h3>
+            <p class="muted">{{ job.role }} · {{ job.location }}</p>
+            <ul class="bullets">
+              {% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}
+            </ul>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+
+    <aside class="sidebar">
+      <div class="panel">
+        <h2 class="label">Education</h2>
+        <h3>University of California San Diego</h3>
+        <p>B.S. Mechanical Engineering: Robotics &amp; Controls</p>
+        <p class="muted">2023 – June 2027</p>
+        <p class="small muted">
+          Coursework: Solid Mechanics, Fluid Mechanics, Linear Control, Signals, Computational Methods,
+          Thermodynamics, Statistical Methods, Mechanics of Materials, Statics, Dynamics &amp; Vibrations,
+          Manual &amp; CNC Machining.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h2 class="label">Skills</h2>
+        {% for group in site.data.skills %}
+        <h3 class="skill-group">{{ group.name }}</h3>
+        <ul class="tags">
+          {% for s in group.list %}<li>{{ s }}</li>{% endfor %}
+        </ul>
+        {% endfor %}
+      </div>
+    </aside>
+  </div>
+</section>

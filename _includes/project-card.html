@@ -1,0 +1,20 @@
+{% assign p = include.project %}
+<a class="card" href="{{ p.url | relative_url }}" data-tags="{{ p.tags | join: '|' }}">
+  <div class="card-media">
+    {% if p.image %}
+      <img src="{{ p.image | relative_url }}" alt="{{ p.title }}" loading="lazy">
+    {% else %}
+      <div class="card-placeholder">
+        <span>{{ p.tags | first }}</span>
+      </div>
+    {% endif %}
+  </div>
+  <div class="card-body">
+    <p class="eyebrow">{{ p.org }} · {{ p.period }}</p>
+    <h3>{{ p.title }}</h3>
+    <p class="card-text">{{ p.summary }}</p>
+    <ul class="tags">
+      {% for tag in p.tags %}<li>{{ tag }}</li>{% endfor %}
+    </ul>
+  </div>
+</a>

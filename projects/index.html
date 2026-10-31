@@ -1,0 +1,27 @@
+---
+title: Projects
+description: Surgical robotics, autonomous systems, and assistive devices designed and built by Bendavid Maimon.
+---
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow">Portfolio</p>
+    <h1>Projects</h1>
+    <p class="lead">Selected work across research labs, competition teams, and community engineering.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container">
+    {% assign projects = site.projects | sort: 'order' %}
+    {% assign all_tags = projects | map: 'tags' | join: '|' | split: '|' | uniq | sort %}
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="chip active" data-filter="all">All</button>
+      {% for tag in all_tags %}<button class="chip" data-filter="{{ tag }}">{{ tag }}</button>{% endfor %}
+    </div>
+    <div class="grid" id="project-grid">
+      {% for project in projects %}
+        {% include project-card.html project=project %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

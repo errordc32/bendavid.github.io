@@ -1,0 +1,45 @@
+- org: UCSD Morimoto Robotics Lab
+  role: Undergraduate Researcher
+  location: La Jolla, CA
+  period: 2025 – Present
+  bullets:
+    - Designed nitinol wristed robotic instruments for non-invasive surgical removal of cancerous colonic polyps.
+    - Fabricated robots by CNC milling, then redesigned the production workflow with sinker-EDM HSS jigging and wire EDM, cutting machining time from 4 hours to 23 minutes.
+    - Integrated the control scheme using micro-ROS for actuation and built a VM-based TCP–ROS bridge for high-frequency, time-synced data from inline load cells, 6-axis load sensors, and EM position tracking.
+    - Designed and fabricated a sub-millimeter electrosurgical knife for endoscopic submucosal dissection.
+    - Authoring a paper on minimally invasive traction-assisted polypectomy for the IEEE International Symposium on Medical Robotics.
+
+- org: UCSD Delson Engineering Lab
+  role: Undergraduate Researcher
+  location: La Jolla, CA
+  period: 2023 – 2024
+  bullets:
+    - Designed external colonoscope manipulation tools to reduce stress and risk during operation.
+    - Researched tribology techniques to analyze and reduce friction in the system.
+    - Designed and assembled a portable rig to collect torque and EMG data on the advanced colonoscopy simulator at the Center for Surgery of the Future.
+
+- org: Triton Robotics
+  role: Mechanical Design Engineer
+  location: La Jolla, CA
+  period: 2023 – 2025
+  bullets:
+    - Redesigned and fabricated a modular autonomous robot for the ARC robotics contest, reducing volume by 28%, increasing speed, and eliminating backlash with capstan actuators.
+    - Used Nvidia Jetson and CUDA to fully automate control, enabling autonomous targeting, task-based repositioning, and real-time projectile calculations.
+    - Contributed to the team's 3rd place trophy at ARC Nationals.
+
+- org: TOM at UCSD
+  role: Founder
+  location: La Jolla, CA
+  period: 2024 – 2025
+  bullets:
+    - Founded UCSD's TOM chapter, designing open-source solutions for disabled and elderly San Diegans whose needs are neglected as unprofitable.
+    - Partnered with Rady Children's Hospital to design and fabricate 8 3D-printed wheelchairs for children with spina bifida, leading to 3 additional requests from local families.
+    - Collaborated with JSOE on a low-cost, open-source running blade to remove the barrier to entry for para-athletes.
+
+- org: Geisel Library
+  role: CDM Operations Specialist
+  location: La Jolla, CA
+  period: 2023 – 2025
+  bullets:
+    - Designed an automated patron-item tracking system and an Arduino IoT library that reports status and user data to the team through the Slack API.
+    - Programmed an automated database-handling system connecting Google Workspace and Ex Libris.

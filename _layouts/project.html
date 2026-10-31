@@ -1,0 +1,67 @@
+---
+layout: default
+---
+<article class="project">
+  <header class="project-hero">
+    <div class="container narrow">
+      <a class="back-link" href="{{ '/projects/' | relative_url }}">← All projects</a>
+      <p class="eyebrow">{{ page.org }}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="lead">{{ page.summary }}</p>
+      <dl class="meta">
+        <div><dt>Role</dt><dd>{{ page.role }}</dd></div>
+        <div><dt>Timeline</dt><dd>{{ page.period }}</dd></div>
+        <div><dt>Focus</dt><dd>{{ page.tags | join: ', ' }}</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  {% if page.image %}
+  <div class="container">
+    <figure class="project-cover"><img src="{{ page.image | relative_url }}" alt="{{ page.title }}"></figure>
+  </div>
+  {% endif %}
+
+  {% if page.stats %}
+  <div class="container narrow">
+    <ul class="stats">
+      {% for s in page.stats %}
+      <li><span class="stat-value">{{ s.value }}</span><span class="stat-label">{{ s.label }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <div class="container narrow prose">
+    {{ content }}
+  </div>
+
+  {% if page.gallery %}
+  <div class="container">
+    <div class="gallery">
+      {% for img in page.gallery %}
+      <figure>
+        <img src="{{ img.src | relative_url }}" alt="{{ img.caption | default: page.title }}" loading="lazy">
+        {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% assign projects = site.projects | sort: 'order' %}
+  {% for p in projects %}
+    {% if p.url == page.url %}
+      {% assign prev_index = forloop.index0 | minus: 1 %}
+      {% assign next_index = forloop.index0 | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+  <nav class="container narrow project-nav">
+    {% if prev_index >= 0 %}{% assign prev = projects[prev_index] %}
+      <a href="{{ prev.url | relative_url }}"><span class="muted small">← Previous</span>{{ prev.title }}</a>
+    {% else %}<span></span>{% endif %}
+    {% if next_index < projects.size %}{% assign next = projects[next_index] %}
+      <a class="next" href="{{ next.url | relative_url }}"><span class="muted small">Next →</span>{{ next.title }}</a>
+    {% endif %}
+  </nav>
+</article>
