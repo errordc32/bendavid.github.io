@@ -6,6 +6,7 @@ role: Mechanical Design Engineer
 period: 2023 – 2025
 tags: [Autonomy, Mechanical Design, Controls]
 featured: true
+status: complete           # complete | prototype | design | concept
 order: 4
 image: /assets/images/projects/Tritn_robotics/sentry_gif.gif   # GIFs work anywhere an image does
 cover: /assets/images/projects/Tritn_robotics/sentry_gif.gif

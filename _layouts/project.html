@@ -12,6 +12,7 @@ layout: default
         <div><dt>Role</dt><dd>{{ page.role }}</dd></div>
         <div><dt>Timeline</dt><dd>{{ page.period }}</dd></div>
         <div><dt>Focus</dt><dd>{{ page.tags | join: ', ' }}</dd></div>
+        {% if page.status %}<div><dt>Status</dt><dd>{% include status.html status=page.status %}</dd></div>{% endif %}
       </dl>
     </div>
   </header>

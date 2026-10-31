@@ -27,6 +27,7 @@ role: Your role
 period: 2025 – 2026
 tags: [Mechanical Design, Controls]
 featured: true          # show on the home page
+status: prototype       # complete | prototype | design | concept (badge on card + project page)
 order: 9                # sort position
 image: /assets/images/projects/my-project.jpg   # card thumbnail + link-preview image (jpg/png/gif, optional)
 card: /assets/images/projects/my-project.mp4    # use a video/other media on the card instead of `image` (optional)

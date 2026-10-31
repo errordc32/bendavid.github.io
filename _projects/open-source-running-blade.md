@@ -6,6 +6,7 @@ role: Founder / Designer
 period: 2024 – 2025
 tags: [Assistive Tech, Mechanical Design]
 featured: false
+status: prototype           # complete | prototype | design | concept
 order: 6
 # image: /assets/images/projects/running-blade.jpg
 ---

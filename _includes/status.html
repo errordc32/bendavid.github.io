@@ -1,0 +1,5 @@
+{%- comment -%} Project status badge. Valid values: complete, prototype, design, concept {%- endcomment -%}
+{%- assign s = include.status | downcase -%}
+{%- if s == 'complete' or s == 'prototype' or s == 'design' or s == 'concept' -%}
+<span class="status status-{{ s }}">{{ s | capitalize }}</span>
+{%- endif -%}

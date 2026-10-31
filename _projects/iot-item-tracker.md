@@ -6,6 +6,7 @@ role: CDM Operations Specialist
 period: 2023 – 2025
 tags: [Embedded, Software]
 featured: false
+status: complete           # complete | prototype | design | concept
 order: 8
 # image: /assets/images/projects/iot-tracker.jpg
 ---

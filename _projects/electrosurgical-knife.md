@@ -6,6 +6,7 @@ role: Undergraduate Researcher
 period: 2025 – Present
 tags: [Medical Robotics, Manufacturing]
 featured: false
+status: prototype           # complete | prototype | design | concept
 order: 3
 image: /assets/images/projects/surgical_knife/thermal_knife.jpg
 gallery:

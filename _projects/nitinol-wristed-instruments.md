@@ -6,6 +6,7 @@ role: Undergraduate Researcher
 period: 2025 – Present
 tags: [Medical Robotics, Mechanical Design, Manufacturing]
 featured: true
+status: prototype           # complete | prototype | design | concept
 order: 1
 image: /assets/images/projects/Helping_Hand/stepwise_resection.jpg   # still used for link previews
 card: /assets/images/projects/Helping_Hand/HH_actuating.mp4          # plays on the project card

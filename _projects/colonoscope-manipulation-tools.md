@@ -6,6 +6,7 @@ role: Undergraduate Researcher
 period: 2023 – 2024
 tags: [Medical Robotics, Mechanical Design, Embedded]
 featured: false
+status: prototype           # complete | prototype | design | concept
 order: 7
 image: /assets/images/projects/endogrip/testing_rig_web.jpg
 image_position: 50% 40%
