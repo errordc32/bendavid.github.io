@@ -6,8 +6,8 @@ role: Founder
 period: 2024 – 2025
 tags: [Assistive Tech, Mechanical Design]
 featured: true
-status: complete           # complete | prototype | design | concept
 order: 5
+status: complete           # complete | prototype | design | concept
 image: /assets/images/projects/pediatric_wheelchairs/wheelchair_2.png
 stats:
   - value: "8"
@@ -18,15 +18,15 @@ stats:
 
 ## Overview
 
-I founded the UCSD chapter of **TOM**, which works with disabled and elderly people in San Diego to design custom, open-source solutions for needs that companies ignore because they aren't profitable.
+TOM at UCSD built a **3D printed pediatric wheelchair** for 6 patients with spina bifida. The PETG frame is very light, strong, an
 
 ## What I did
 
-- Partnered with **Rady Children's Hospital** to design and fabricate **8 3D-printed wheelchairs** for children with spina bifida.
 - Led the organization, from finding community needs to delivering hardware.
+- oversaw a team of 
 
 {% include media.html src="/assets/images/projects/pediatric_wheelchairs/wheelchair_2.png" class="small" caption="The 3D-printed wheelchair." %}
 
 ## Outcome
 
-The wheelchairs led to **3 more requests** from families in the San Diego community. TOM also built a [plywood version]({{ '/projects/wheelchair-wood/' | relative_url }}) of the same chair.
+The wheelchairs are currently still in use, we get frequents messages and videos from their users led to **3 more requests** from families in the San Diego community. TOM also built a [plywood version]({{ '/projects/wheelchair-wood/' | relative_url }}) of the same chair.

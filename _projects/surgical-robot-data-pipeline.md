@@ -6,7 +6,7 @@ role: Undergraduate Researcher
 period: 2025 – Present
 tags: [Controls, Embedded, Medical Robotics]
 featured: false
-status: prototype           # complete | prototype | design | concept
+status: complete           # complete | prototype | design | concept
 order: 2
 # image: /assets/images/projects/data-pipeline.jpg
 ---
