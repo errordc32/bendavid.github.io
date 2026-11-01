@@ -185,25 +185,55 @@ p { margin: 0 0 1em; }
 .hero-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
 .hero h1 { max-width: 18ch; }
 
-.hero-stats {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
+// Media collage: tall tile left, two small right, wide tile along the bottom
+.reel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 150px;
+  gap: 10px;
 }
-.hero-stats li { background: var(--surface); padding: 1.1rem 1.3rem; display: flex; flex-direction: column; gap: 0.2rem; }
+.reel-tile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--blueprint);
+  box-shadow: var(--shadow);
+}
+.reel-tile:nth-child(1) { grid-row: span 2; }
+.reel-tile:nth-child(4) { grid-column: span 2; }
+.reel-tile img, .reel-tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.reel-tile:hover img, .reel-tile:hover video { transform: scale(1.05); }
+.reel-label {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 1.6rem 0.8rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.reel-tile:hover .reel-label, .reel-tile:focus-visible .reel-label { opacity: 1; transform: none; }
 
 .stat-value { font-family: var(--font-head); font-weight: 700; font-size: 1.45rem; letter-spacing: -0.02em; }
 .stat-label { font-size: 0.88rem; color: var(--muted); line-height: 1.4; }
 
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-stats { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 480px) {
-  .hero-stats { grid-template-columns: 1fr; }
+  .reel { grid-auto-rows: 110px; }
+}
+@media (hover: none) {
+  .reel-label { opacity: 1; transform: none; }
 }
 
 // ---------- Project cards ----------
