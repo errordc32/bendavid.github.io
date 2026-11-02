@@ -12,8 +12,20 @@ layout: default
         <div><dt>Role</dt><dd>{{ page.role }}</dd></div>
         <div><dt>Timeline</dt><dd>{{ page.period }}</dd></div>
         <div><dt>Focus</dt><dd>{{ page.tags | join: ', ' }}</dd></div>
+        {% if page.team %}<div><dt>Team</dt><dd>{{ page.team }}</dd></div>{% endif %}
         {% if page.status %}<div><dt>Status</dt><dd>{% include status.html status=page.status %}</dd></div>{% endif %}
       </dl>
+      {% if page.tools %}
+      <div class="tools">
+        <span class="tools-label">Tools &amp; methods</span>
+        <ul class="tags">{% for t in page.tools %}<li>{{ t }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+      {% if page.links %}
+      <div class="actions">
+        {% for l in page.links %}<a class="btn btn-small{% unless forloop.first %} btn-ghost{% endunless %}" href="{{ l.url | relative_url }}" target="_blank" rel="noopener">{{ l.label }} ↗</a>{% endfor %}
+      </div>
+      {% endif %}
     </div>
   </header>
 
@@ -39,12 +51,31 @@ layout: default
 
   {% if page.gallery %}
   <div class="container">
+    <h2 class="label section-label">Gallery</h2>
     <div class="gallery">
       {% for item in page.gallery %}
         {% include media.html src=item.src caption=item.caption alt=page.title %}
       {% endfor %}
     </div>
   </div>
+  {% endif %}
+
+  {%- comment -%} Related: other projects sharing at least one tag, up to 3 {%- endcomment -%}
+  {% assign related = "" | split: "" %}
+  {% for p in site.projects %}
+    {% if p.url != page.url and related.size < 3 %}
+      {% for t in p.tags %}
+        {% if page.tags contains t %}{% assign related = related | push: p %}{% break %}{% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  {% if related.size > 0 %}
+  <section class="container related">
+    <h2 class="label section-label">Related projects</h2>
+    <div class="grid">
+      {% for p in related %}{% include project-card.html project=p %}{% endfor %}
+    </div>
+  </section>
   {% endif %}
 
   {% assign projects = site.projects | sort: 'order' %}

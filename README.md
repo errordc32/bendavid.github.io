@@ -28,6 +28,11 @@ period: 2025 – 2026
 tags: [Mechanical Design, Controls]
 featured: true          # show on the home page
 status: prototype       # complete | prototype | design | concept (badge on card + project page)
+team: Team of 4         # shown next to Role/Timeline (optional)
+tools: [SolidWorks, Wire EDM, ROS 2]   # "Tools & methods" chips under the header (optional)
+links:                  # buttons under the header (optional)
+  - label: Read the paper
+    url: https://...
 order: 9                # sort position
 image: /assets/images/projects/my-project.jpg   # card thumbnail + link-preview image (jpg/png/gif, optional)
 card: /assets/images/projects/my-project.mp4    # use a video/other media on the card instead of `image` (optional)
