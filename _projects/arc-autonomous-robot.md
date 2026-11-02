@@ -8,8 +8,13 @@ tags: [Autonomy, Mechanical Design, Controls]
 featured: true
 status: complete           # complete | prototype | design | concept
 order: 4
-image: /assets/images/projects/Tritn_robotics/sentry_gif.gif   # GIFs work anywhere an image does
-cover: /assets/images/projects/Tritn_robotics/sentry_gif.gif
+image: /assets/images/projects/Triton_robotics/sentry_gif.gif   # GIFs work anywhere an image does
+cover: /assets/images/projects/Triton_robotics/sentry_gif.gif
+gallery:
+  - src: /assets/images/projects/Triton_robotics/sentry_irl.jpg
+    caption: The sentry on its mecanum base, with the stereo camera and launcher on the turret.
+  - src: /assets/images/projects/Triton_robotics/sentry_irl2.jpg
+    caption: Rear view showing the truss-cut pitch plates, electronics enclosure, and suspension.
 stats:
   - value: "−28%"
     label: Robot volume
@@ -29,7 +34,7 @@ Triton Robotics competes in the ARC robotics contest, where autonomous robots ai
 - **Eliminated backlash** by replacing the drives with **capstan-based actuators**.
 - Used an **Nvidia Jetson** and **CUDA** to fully automate the control scheme, giving the robot autonomous targeting, task-based repositioning, and real-time projectile calculations.
 
-{% include media.html src="/assets/images/projects/Tritn_robotics/pitch_assmb.png" caption="CAD of the turret's pitch assembly: a truss-cut side plate driving the launcher module, mounted on the yaw ring." %}
+{% include media.html src="/assets/images/projects/Triton_robotics/pitch_assmb.png" caption="CAD of the turret's pitch assembly: a truss-cut side plate driving the launcher module, mounted on the yaw ring." %}
 
 ## Outcome
 

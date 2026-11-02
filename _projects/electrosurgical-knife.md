@@ -8,11 +8,11 @@ tags: [Medical Robotics, Manufacturing]
 featured: false
 status: prototype           # complete | prototype | design | concept
 order: 3
-image: /assets/images/projects/surgical_knife/thermal_knife.jpg
+image: /assets/images/projects/thermal_knife/thermal_knife.jpg
 gallery:
-  - src: /assets/images/projects/surgical_knife/thermal_knife.jpg
+  - src: /assets/images/projects/thermal_knife/thermal_knife.jpg
     caption: Knife tip energized during a bench test.
-  - src: /assets/images/projects/surgical_knife/thermal_imaging.jpg
+  - src: /assets/images/projects/thermal_knife/thermal_imaging.jpg
     caption: Thermal image during activation. Heat stays concentrated at the tip (peak reading 130°).
 ---
 

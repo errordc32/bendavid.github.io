@@ -8,7 +8,8 @@ tags: [Assistive Tech, Mechanical Design]
 featured: false
 status: prototype           # complete | prototype | design | concept
 order: 6
-# image: /assets/images/projects/running-blade.jpg
+image: /assets/images/projects/running_blade/bi-layer_blade.png
+image_position: 50% 30%
 ---
 
 ## Overview
@@ -17,8 +18,11 @@ Running blades are expensive, which keeps many people out of para-athletic sport
 
 ## What I did
 
-- **Designed** the blade for low-cost fabrication.
+- **Designed** the blade for low-cost fabrication, using a **bi-layer construction**: a continuous outer shell with stiffening inserts along the curved spring section that tune its flex.
+- Added a four-bolt mounting tab at the top so it attaches to a standard socket adapter.
 - Released it as **open source** so others can build and adapt it.
+
+{% include media.html src="/assets/images/projects/running_blade/bi-layer_blade.png" class="small" caption="CAD of the bi-layer blade. The inserts (orange) stiffen the spring section." %}
 
 ## Outcome
 
